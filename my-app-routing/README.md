@@ -1,4 +1,6 @@
-# MyApp
+# Example app for Angular with Routing
+
+![alt text](https://github.com/Pooky/AngularExamples/tree/master/my-app-routing/angular-app.PNG?raw=true)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
