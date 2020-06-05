@@ -1,0 +1,31 @@
+<h1>Employee component</h1>
+
+
+<hr><br><br>
+
+
+<form #f="ngForm" id="employeeForm" novalidate>
+
+    <div *gIf="isLoggedIn">
+        User is logged
+    </div>
+    <mat-form-field class="example-form-field">
+        <mat-label>Jméno zaměstnance</mat-label>
+        <input matInput type="text" [(ngModel)]="employeeForm.firstname" [disabled]="isDisabled" name="firstname" required>
+
+     </mat-form-field>
+
+     <mat-form-field>
+        <mat-label>Favorite food</mat-label>
+        <mat-select [(value)]="selectedFood">
+            <mat-option></mat-option>
+            <mat-option *ngFor="let option of foods" [value]="option.value">{{ option.viewValue}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div>{{ selectedFood }}</div>
+
+     <button 
+        #submitButton
+        type="submit" (click)="submit(f, submitButton)"  mat-raised-button color="primary">Odeslat</button>
+</form>

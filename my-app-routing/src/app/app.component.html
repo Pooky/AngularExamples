@@ -1,0 +1,23 @@
+<div class="main-body">
+    <h1>App component</h1>
+    <!--
+    <button (click)="createObject()">Click me</button> 
+    <br>
+
+    <h3>Začátek reporting componenty</h3>
+    <reporting></reporting>-->
+    <!---->
+    <!--<app-employee></app-employee>-->
+    <!--<app-http-client></app-http-client>-->
+    
+    <input #newFood type="text">
+    <button (click)="addFood(newFood.value)">Add food</button>
+    <app-my-component [data]="foods"></app-my-component>
+    
+    <router-outlet></router-outlet>
+
+    <button routerLink="/employee">Employee Page</button>
+    <button routerLink="/lazy-load">Lazy load Module</button>
+    <button routerLink="/">Index Page</button>
+
+</div>
